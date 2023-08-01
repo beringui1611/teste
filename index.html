@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <title>teste</title>
+</head>
+
+<body>
+   
+    <div class="container">
+        <div class="container-left">
+            <img style="height: 100vh;" src="assets/background-left.jpeg" alt="">
+          
+            <div class="front-card">
+                <img class="card" src="././assets/card.png" alt="">
+                <div class="itens-card">
+                    <div class="number-card">
+                        <p id="result">0000 0000 0000 0000</p>
+                    </div>
+                    <div class="name-card">
+                        <p id="name" >Your Name </p>
+                    </div>
+                    <div style="display: flex;" class="date-card">
+                        <div><p id="validate-month">00</p></div>
+                        <div><p></p>/</p></div>
+                       <div><p id="validate-years">00</p></div>
+                        
+                      
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="back-card">
+                <img src="./assets/back-card.jpeg" alt="">
+                <div  class="code-card"><p id="cvc">000</p></div> 
+     
+            </div>
+        </div>
+      
+       
+
+
+        <div id="container-rigth" class="container-rigth">
+            <div class="forms">
+                <label >CARDHOLDER NAME</label>
+                <input id="input-name"  style="padding: 10px;" class="info" type="name" placeholder="Your Name" onchange="nameValue()" required>
+                <div id="mensagemName" style="display: none; color: red;"></div>
+<br><br><br>
+                <label >CARD NUMBER</label>
+                <input style="padding: 10px;"  id="cartaoCredito"  onchange="numberValue()" class="info"  maxlength="19" placeholder="0000 0000 0000 0000" inputmode="numeric" required> 
+                <div id="mensagemNumber" style="display: none; color: red;"></div>
+            
+
+
+
+
+<div class="container-input" >
+                <div class="input-itens" style="margin-top: 50px;">
+                <label>EXP.DATE(MM/YY)</label>
+                
+                <input onchange="month()" id="month-input" class="codes" inputmode="numeric" placeholder="00" style="padding: 10px;" maxlength="2" required>
+                <input onchange="years()" id="years-input" class="codes" inputmode="numeric" placeholder="00" style="padding: 10px;" maxlength="2" required>
+                <div id="mensagemDate" style="display: none; color: red;"></div>
+            
+            </div>
+
+            <div style="margin-left: 50px; margin-top: 50px;">
+                <label >CVC</label>
+                <input id="input-cvc" onchange="cvc()" class="cvc"  inputmode="numeric" placeholder="000" style="padding: 10px;" maxlength="3" style="text-decoration: none;" required>
+                <div id="mensagemCvc" style="display: none; color: red;"></div>
+            
+            </div>
+            </div>
+                <button id="submit">Confirm</button>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <div id="container-rigth2" class="box-2">
+        <img class="img-confimation" src="./assets/verify.png">
+        <div id="level-confirmation" class="level-confirmation">
+    
+        </div>
+        <h1 id='thanks' class="thanks">Thank you!</h1>
+        <p class="text-confirmation">We`ve added your card details</p>
+
+            <button class="return" onclick="returnPage()"> voltar</button>
+    </div>
+
+
+
+</body>
+
+<script src="./index.js"></script>
+
+</html>
